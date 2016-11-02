@@ -8,11 +8,15 @@
 
 import UIKit
 
+
 class MatchesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var messageCountLabel: UILabel!
     @IBOutlet weak var matchPhoto: UIImageView!
+    
+    @IBOutlet weak var responseButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
