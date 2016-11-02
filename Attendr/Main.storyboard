@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5r5-9y-0Nu">
@@ -221,8 +222,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="5rI-1C-H00" kind="relationship" relationship="viewControllers" id="WaC-GT-MRU"/>
-                        <segue destination="2qH-lg-EWK" kind="relationship" relationship="viewControllers" id="k4y-ik-R1S"/>
                         <segue destination="aPX-62-tuu" kind="relationship" relationship="viewControllers" id="uV8-k6-yx7"/>
+                        <segue destination="2qH-lg-EWK" kind="relationship" relationship="viewControllers" id="k4y-ik-R1S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTa-Rp-Kmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,10 +238,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.30082309571071042" blue="0.44425398114177217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" axis="vertical" id="Aaj-fi-lPE">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+
                                 <navigationBar contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-mJ-3vP">
                                     <items>
                                         <navigationItem title="Matches" id="TUL-QT-3B7"/>
@@ -269,6 +272,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Lq-Oj-Xie">
 
 
+
                                             <frame key="frameInset" minY="-8" width="88" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
 
@@ -284,6 +288,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkz-P7-hTQ">
+
 
                                             <frame key="frameInset" minX="96" minY="45" width="271" height="21"/>
 
@@ -343,6 +348,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drR-HE-cm6" id="UPO-4d-qih">
 
+
                                     <frame key="frameInset" width="375" height="200"/>
 
                                     <autoresizingMask key="autoresizingMask"/>
@@ -397,7 +403,7 @@
                         <viewControllerLayoutGuide type="top" id="bpW-gO-urR"/>
                         <viewControllerLayoutGuide type="bottom" id="l34-pz-ohr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="81b-0S-cbf">
+                    <view key="view" contentMode="scaleAspectFill" id="81b-0S-cbf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -444,7 +450,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ds3-WR-nw0">
                                 <frame key="frameInset" minX="16" minY="144" width="343" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -452,27 +458,28 @@
 
                                 <frame key="frameInset" minX="16" minY="267" width="343" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-62-pVj">
 
                                 <frame key="frameInset" minX="16" minY="231" width="343" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-oP-YEZ">
                                 <frame key="frameInset" minX="16" minY="320" width="343" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="ovt-KB-5AC" id="7Zq-Uw-jcl"/>
@@ -491,6 +498,7 @@
     </scenes>
     <resources>
         <image name="city1_cycling_meetup" width="585" height="390"/>
+        <image name="events_button" width="267" height="100"/>
         <image name="heart_icon" width="290" height="302"/>
         <image name="logo" width="502" height="166"/>
     </resources>
