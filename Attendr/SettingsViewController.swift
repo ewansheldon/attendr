@@ -35,13 +35,19 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         loginButton.delegate = self
         sexPicker.delegate = self
         sexPicker.dataSource = self
-        pickerData = ["Dating", "Long Term Relationship", "Friends", "A bit of Fun"]
+        pickerData = ["Short Term Dating", "Long Term Dating", "Friends", "A bit of Fun", "A lot of Fun"]
         getProfile()
     }
     
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 8.0)!])
+        return myTitle
     }
     
     // The number of rows of data
