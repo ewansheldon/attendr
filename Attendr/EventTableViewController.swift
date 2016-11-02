@@ -11,15 +11,12 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
 
-    // MARK: Properties
     var TableData:Array< Array<String> > = Array < Array<String>>()
     
     let tphoto = TablePhoto()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
         get_data_from_url("https://attendr-server.herokuapp.com/events")
     }
     
@@ -44,7 +41,6 @@ class EventTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
@@ -71,15 +67,11 @@ class EventTableViewController: UITableViewController {
         let date = formatter.date(from: timestamp)
         formatter.dateFormat = "dd/MM/yyy - HH:mm"
         let st = formatter.string(from: date!)
-        print(st)
-        
         
         // Configure the cell...
         cell.nameLabel?.text = TableData[indexPath.row][0]
-        cell.addressLabel?.text = TableData[indexPath.row][1]
         cell.dateLabel?.text = st
         cell.responseButton.tag = indexPath.row
-        
         
         cell.backgroundView = UIImageView(image: UIImage(named: picture.filename));
         
@@ -143,7 +135,5 @@ class EventTableViewController: UITableViewController {
         
             // Take user to SecondViewController
             self.present(responseViewController, animated: true)
-            
-
     }
  }
