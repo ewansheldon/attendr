@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5r5-9y-0Nu">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5r5-9y-0Nu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -178,39 +178,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lr9-6U-nD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1015.2" y="585.1574212893554"/>
-        </scene>
-        <!--Chat-->
-        <scene sceneID="lLD-6M-jWV">
-            <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="CHA-aK-1gK" customClass="ChatViewController" customModule="Attendr" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="95L-kv-X9Q"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Eg-IO-FYm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Pkn-i8-xaF" customClass="Chat">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="aQo-0Y-VsZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <navigationBar contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q3B-ha-Prr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                        <items>
-                                            <navigationItem title="Chat" id="Rdr-uy-JzP"/>
-                                        </items>
-                                    </navigationBar>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Chat" id="7Xs-Tk-fcg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VT5-KC-bw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1092" y="-231"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5WC-Ea-HWB">
@@ -405,7 +372,7 @@
                                             <navigationItem title="Details" id="IWK-jP-Qqp">
                                                 <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="apA-fr-zVt">
                                                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iBf-JK-CMS">
-                                                        <rect key="frame" x="16" y="963" width="83" height="30"/>
+                                                        <rect key="frame" x="16" y="23" width="83" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Back"/>
                                                         <connections>
@@ -421,7 +388,7 @@
                                     </navigationBar>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-hz-2fx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-hz-2fx">
                                 <rect key="frame" x="16" y="68" width="58" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Interested" image="heart_icon"/>
@@ -481,6 +448,24 @@
             </objects>
             <point key="canvasLocation" x="1092" y="-993.55322338830592"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="2oR-IL-wq5">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="gaV-iL-grA" customClass="ChatViewController" customModule="Attendr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJy-jA-ron"/>
+                        <viewControllerLayoutGuide type="bottom" id="ViV-wK-9BC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iNK-kg-hTe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltB-oK-mxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-230"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Services" width="25" height="25"/>
@@ -491,6 +476,6 @@
         <image name="logo" width="502" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NCI-q8-bFa"/>
+        <segue reference="9Q3-Dp-Fge"/>
     </inferredMetricsTieBreakers>
 </document>
