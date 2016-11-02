@@ -175,6 +175,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h03-am-9fS" userLabel="Response Button">
                                             <frame key="frameInset" minY="-8" width="375" height="86"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -380,10 +381,7 @@
         <image name="logo" width="502" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="q4l-js-Apb"/>
-=======
+        <!-- <segue reference="q4l-js-Apb"/> -->
         <segue reference="9Q3-Dp-Fge"/>
->>>>>>> master
     </inferredMetricsTieBreakers>
 </document>
