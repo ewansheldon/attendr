@@ -84,9 +84,9 @@ class ChatViewController: JSQMessagesViewController {
         let message = messages[indexPath.item]
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         if message.senderId == self.senderId {
-            return bubbleFactory!.outgoingMessagesBubbleImage(with: UIColor.lightGray)
+            return bubbleFactory!.outgoingMessagesBubbleImage(with: UIColor(red:0.79, green:0.60, blue:0.60, alpha:1.0))
         } else {
-            return bubbleFactory!.incomingMessagesBubbleImage(with: UIColor.blue)
+            return bubbleFactory!.incomingMessagesBubbleImage(with: UIColor(red:0.56, green:0.65, blue:0.80, alpha:1.0))
         }
     }
     
