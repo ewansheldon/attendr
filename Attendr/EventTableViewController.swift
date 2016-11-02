@@ -18,6 +18,7 @@ class EventTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         get_data_from_url("https://attendr-server.herokuapp.com/events")
     }
@@ -64,10 +65,19 @@ class EventTableViewController: UITableViewController {
         
         let picture = tphoto.captures[indexPath.row % tphoto.captures.count];
         
+        let timestamp = "\(TableData[indexPath.row][2])"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = formatter.date(from: timestamp)
+        formatter.dateFormat = "dd/MM/yyy - HH:mm"
+        let st = formatter.string(from: date!)
+        print(st)
+        
+        
         // Configure the cell...
         cell.nameLabel?.text = TableData[indexPath.row][0]
         cell.addressLabel?.text = TableData[indexPath.row][1]
-        cell.dateLabel?.text = TableData[indexPath.row][2]
+        cell.dateLabel?.text = st
         cell.responseButton.tag = indexPath.row
         
         
@@ -76,7 +86,6 @@ class EventTableViewController: UITableViewController {
         cell.responseButton.addTarget(self, action: #selector(buttonHandler(_:)), for: UIControlEvents.touchUpInside)
         
         return cell
-      
     }
 
     
