@@ -55,7 +55,7 @@ class ChatViewController: JSQMessagesViewController {
     
     func observeMessages() {
         messageRef.child(myID).child(theirID).observe(FIRDataEventType.childAdded, with: { (snapshot) in
-            if let dict = snapshot.value as? [String: AnyObject] {
+            if let dict = snapshot.value as? NSDictionary {
                 let senderId = dict["senderId"] as! String
                 let senderName = dict["senderName"] as! String
                 let text = dict["text"] as! String
@@ -70,7 +70,8 @@ class ChatViewController: JSQMessagesViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         let newMessage = messageRef.child("\(myID!)").child("\(theirID!)").childByAutoId()
         let theirMessage = messageRef.child("\(theirID ?? "")").child("\(myID!)").childByAutoId()
-        let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName]
+        print(senderId)
+        let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName] as NSDictionary
         newMessage.setValue(messageData)
         theirMessage.setValue(messageData)
         self.finishSendingMessage()
