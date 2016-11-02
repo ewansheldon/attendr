@@ -24,21 +24,28 @@ class ResponseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let timestamp = "\(myStringValue[2])"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = formatter.date(from: timestamp)
+        formatter.dateFormat = "dd/MM/yyy - HH:mm"
+        let st = formatter.string(from: date!)
+        print(st)
+        
         nameLabel.text = "\(myStringValue[0])"
         addressLabel.text = "\(myStringValue[1])"
-        dateLabel.text = "\(myStringValue[2])"
+        dateLabel.text = st
         descriptionLabel.text = "\(myStringValue[4].html2String)"
         
         interestedButton.setImage(UIImage(named: "heart_icon.png")?.withRenderingMode(.alwaysOriginal), for: .normal)
         interestedButton.setImage(UIImage(named: "filled_heart_icon.png")?.withRenderingMode(.alwaysOriginal), for: .selected)
         
         mapButton.addTarget(self, action: #selector(openMap(_:)), for: UIControlEvents.touchUpInside)
-
         interestedButton.addTarget(self, action: #selector(postRSVP(_:)), for: UIControlEvents.touchUpInside)
         meetupLinkButton.addTarget(self, action: #selector(didTapMeetupLink(_:)), for: UIControlEvents.touchUpInside)
     }
-
+    
     @IBAction func didTapMeetupLink(_ sender:UIButton!) {
         let url = URL(string: "\(myStringValue[5])")!
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
