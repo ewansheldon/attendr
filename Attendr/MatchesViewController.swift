@@ -157,6 +157,7 @@ class MatchesTableViewController: UITableViewController {
         let defaults = UserDefaults.standard
         chatViewController.myID = defaults.string(forKey: "user_id") ?? ""
         chatViewController.theirID = TableData[sender.tag][3]
+        chatViewController.theirName = TableData[sender.tag][0] + " " + TableData[sender.tag][1]
         print(TableData[sender.tag][3])
         
         // Take user to SecondViewController
