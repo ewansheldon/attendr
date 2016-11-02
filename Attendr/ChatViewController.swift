@@ -18,7 +18,7 @@ class ChatViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.messages.append(JSQMessage(senderId: "", displayName: "", text: "Don't Look Up Here"))
-        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:49)) // Offset by 20 pixels vertically to take the status bar into account
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:60)) // Offset by 20 pixels vertically to take the status bar into account
         
         navigationBar.backgroundColor = UIColor.white
         
@@ -69,9 +69,8 @@ class ChatViewController: JSQMessagesViewController {
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         let newMessage = messageRef.child("\(myID!)").child("\(theirID!)").childByAutoId()
         let theirMessage = messageRef.child("\(theirID ?? "")").child("\(myID!)").childByAutoId()
-        print(senderId)
-
         let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName] as NSDictionary
+        
         newMessage.setValue(messageData)
         theirMessage.setValue(messageData)
         self.finishSendingMessage()
