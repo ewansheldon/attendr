@@ -16,15 +16,12 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var matchPhoto: UIImageView!
     @IBOutlet weak var sexPicker: UIPickerView!
     
-    
-    
     var dict : [String : AnyObject]!
     var matchFirst = ""
     var matchLast = ""
     var matchId = ""
     var imageURL:UIImageView!
     var pickerData: [String] = [String]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

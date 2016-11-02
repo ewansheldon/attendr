@@ -14,8 +14,6 @@ class FacebookAuthController: UIViewController, FBSDKLoginButtonDelegate {
     
     var dict : [String : AnyObject]!
    
-    
-    
     override func viewDidAppear(_ animated:Bool){
         if FBSDKAccessToken.current() != nil{
             self.transitionToEvents()
@@ -53,10 +51,6 @@ class FacebookAuthController: UIViewController, FBSDKLoginButtonDelegate {
         // Take user to SecondViewController
         self.present(TabBarController, animated: true)
     }
-    
-    
-    
-    
     
     
     
