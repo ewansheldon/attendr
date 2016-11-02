@@ -9,6 +9,7 @@ class ChatViewController: JSQMessagesViewController {
     
     var myID:String!
     var theirID:String!
+    var theirName:String!
     
     
     var messages = [JSQMessage]()
@@ -25,7 +26,7 @@ class ChatViewController: JSQMessagesViewController {
         
         // Create a navigation item with a title
         let navigationItem = UINavigationItem()
-        navigationItem.title = "Chat"
+        navigationItem.title = theirName
         
         // Create left and right button for navigation item
         let leftButton =  UIBarButtonItem(title: "Back", style:   .plain, target: self, action: #selector(self.btn_clicked(_:)))
