@@ -62,9 +62,14 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Logout successful")
-        self.tabBarController?.tabBar.isHidden = true
+        self.transition()
     }
     
+    func transition() {
+        let facebookAuthController = self.storyboard?.instantiateViewController(withIdentifier: "FacebookAuthController") as! FacebookAuthController
+        self.present(facebookAuthController, animated: true)
+    }
+
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if error != nil {
             print(error)
@@ -88,5 +93,5 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
 
-    
+
 }

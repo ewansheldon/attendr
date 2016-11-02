@@ -70,7 +70,8 @@ class ChatViewController: JSQMessagesViewController {
         let newMessage = messageRef.child("\(myID!)").child("\(theirID!)").childByAutoId()
         let theirMessage = messageRef.child("\(theirID ?? "")").child("\(myID!)").childByAutoId()
         print(senderId)
-        let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName]
+
+        let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName] as NSDictionary
         newMessage.setValue(messageData)
         theirMessage.setValue(messageData)
         self.finishSendingMessage()
