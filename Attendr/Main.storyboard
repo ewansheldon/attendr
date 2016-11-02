@@ -224,7 +224,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fyn-yS-wj4" id="GYL-4f-SeS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93L-q8-lBW">
@@ -305,7 +305,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drR-HE-cm6" id="UPO-4d-qih">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4O-wL-D2m">
@@ -388,7 +388,7 @@
                                     </navigationBar>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-hz-2fx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-hz-2fx">
                                 <rect key="frame" x="16" y="68" width="58" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Interested" image="heart_icon"/>
@@ -452,6 +452,10 @@
         <scene sceneID="2oR-IL-wq5">
             <objects>
                 <viewController storyboardIdentifier="ChatViewController" id="gaV-iL-grA" customClass="ChatViewController" customModule="Attendr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJy-jA-ron"/>
+                        <viewControllerLayoutGuide type="bottom" id="ViV-wK-9BC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iNK-kg-hTe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,6 +473,6 @@
         <image name="logo" width="502" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NCI-q8-bFa"/>
+        <segue reference="9Q3-Dp-Fge"/>
     </inferredMetricsTieBreakers>
 </document>
