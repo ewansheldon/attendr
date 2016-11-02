@@ -55,7 +55,7 @@ class ChatViewController: JSQMessagesViewController {
     
     func observeMessages() {
         messageRef.child(myID).child(theirID).observe(FIRDataEventType.childAdded, with: { (snapshot) in
-            if let dict = snapshot.value as? [String: AnyObject] {
+            if let dict = snapshot.value as? [String: Any] {
                 let senderId = dict["senderId"] as! String
                 let senderName = dict["senderName"] as! String
                 let text = dict["text"] as! String
