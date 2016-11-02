@@ -14,10 +14,10 @@ class ChatViewController: JSQMessagesViewController {
     var messageRef = FIRDatabase.database().reference().child("messages")
 
 
- 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.messages.append(JSQMessage(senderId: "", displayName: "", text: "Don't Look Up Here"))
+        self.topContentAdditionalInset = 60
         let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height:60)) // Offset by 20 pixels vertically to take the status bar into account
         
         navigationBar.backgroundColor = UIColor.white
