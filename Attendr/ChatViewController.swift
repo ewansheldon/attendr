@@ -10,8 +10,6 @@ class ChatViewController: JSQMessagesViewController {
     var myID:String!
     var theirID:String!
     var theirName:String!
-    
-    
     var messages = [JSQMessage]()
     var messageRef = FIRDatabase.database().reference().child("messages")
 
@@ -72,6 +70,7 @@ class ChatViewController: JSQMessagesViewController {
         let newMessage = messageRef.child("\(myID!)").child("\(theirID!)").childByAutoId()
         let theirMessage = messageRef.child("\(theirID ?? "")").child("\(myID!)").childByAutoId()
         print(senderId)
+
         let messageData = ["text": text, "senderId": senderId, "senderName": senderDisplayName] as NSDictionary
         newMessage.setValue(messageData)
         theirMessage.setValue(messageData)

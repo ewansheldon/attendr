@@ -72,10 +72,23 @@ class FacebookAuthController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func postUser() {
-        let firstName = self.dict["first_name"]!
-        let lastName = self.dict["last_name"]!
-        let facebookId = self.dict["id"]!
-        let gender = self.dict["gender"]!
+        let firstName = self.dict["first_name"] as! String
+        let lastName = self.dict["last_name"] as! String
+        let facebookId = self.dict["id"] as! String
+        let gender = self.dict["gender"] as! String
+        let name = firstName + " " + lastName
+        
+        let defaults = UserDefaults.standard
+        struct defaultsKeys {
+            static let name = "name"
+            static let fbid = "fbid"
+        }
+        
+        
+        defaults.setValue(name, forKey: defaultsKeys.name)
+        defaults.setValue(facebookId, forKey: defaultsKeys.fbid)
+        defaults.synchronize()
+        
         var request = URLRequest(url: URL(string: "https://attendr-server.herokuapp.com/users/new")!)
         request.httpMethod = "POST"
         let postString = "first=\(firstName)&last=\(lastName)&fbid=\(facebookId)&gender=\(gender)"
