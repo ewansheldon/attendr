@@ -25,14 +25,14 @@ class FirstScreenViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if !animationPerformedOnce {
-            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 2.0, delay: 0, options: .curveEaseOut, animations: {
                 self.logoConstraintY.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
                 }, completion: nil)
             
             animationPerformedOnce = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.transition(self.logoConstraintY)
         }
     }
